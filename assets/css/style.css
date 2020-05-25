@@ -1,7 +1,10 @@
 /* Gloabl Styles */
 :root {
-  --primary: #0511f2;
-  --secondary: #f2e52e;
+  --bgPrimary: #304863;
+  --bgSeconday: #374f6c;
+  --bgTirtiary: #3f5b7c;
+  --accentPrimary: #d84674;
+  --accentSecondary: #6cd1dd;
   --light: #fff;
   --dark: #2e2e2e;
 }
@@ -9,6 +12,7 @@
 html {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  font-size: 12px;
 }
 body {
   margin: 0;
@@ -17,72 +21,63 @@ body {
   background-color: var(--light);
 }
 
-.btn-primary {
-  padding: 10px 20px;
-  background-color: var(--primary);
-  border-radius: 5px;
-  color: var(--light);
-  cursor: pointer;
-  border: none;
-  box-shadow: 2px 2px 5px #2e2e2e;
-  text-decoration: none;
-}
-
+/* Container Parent */
 .container {
   display: grid;
-}
-
-/* Navbar */
-.nav {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: minmax(100px);
-  background-color: var(--primary);
-}
-
-.nav .nav-brand {
-  display: grid;
-  align-items: center;
-  margin-left: 40px;
-  color: var(--secondary);
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 30px;
-}
-
-.nav .nav-list {
-  display: grid;
-  list-style: none;
-  grid-template-columns: repeat(5, 1fr);
-  grid-auto-rows: 20px;
-  gap: 5px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
   padding: 0;
-}
-
-.nav-link {
-  display: grid;
-  gap: 5px;
-  color: var(--secondary);
-  text-decoration: none;
-  justify-content: center;
-}
-
-.nav-fill-item {
-  background-color: var(--secondary);
-  color: var(--dark);
-  text-decoration: none;
-  padding: 5px 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-/* Header Section */
-.header {
   margin: 0;
-  height: 70vh;
-  background-image: url('/assets/img/header-main.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Menu Section */
+.menu {
+  grid-column: 1 / 3;
+  grid-row: 1/-1;
+  background-color: var(--bgTirtiary);
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(30px, 1fr));
+  text-align: left;
+  gap: 15px;
+  padding-top: 40px;
+}
+
+.menu .link {
+  display: grid;
+  padding: 20px 0;
+  display: flex;
+  cursor: pointer;
+  align-self: center;
+}
+
+.menu .link:hover {
+  background-color: var(--bgSeconday);
+  color: var(--accentPrimary);
+}
+
+.menu .link i {
+  margin: 0 10px;
+}
+
+.active {
+  color: var(--accentSecondary);
+  background-color: var(--accentPrimary);
+}
+
+.active .fas {
+  color: var(--accentSecondary);
+}
+
+.fas {
+  color: var(--bgPrimary);
+}
+
+/* Dashboard Section */
+.dashboard {
+  grid-column: 3 / -1;
+  grid-row: 1/-1;
+  background-color: var(--bgPrimary);
 }

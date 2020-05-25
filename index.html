@@ -3,50 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Grid Landing Page</title>
-
-    <link
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    <title>CSS Grid Landing Page - Dashboard</title>
+    <script
+      src="https://kit.fontawesome.com/c7b441d0a6.js"
       crossorigin="anonymous"
-    />
+    ></script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto:wght@300;700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <!-- Container Wrapper Begin -->
+    <!-- Container Begin -->
     <div class="container">
-      <!-- Nav Begin -->
-      <nav class="nav">
-        <a class="nav-brand" href="/"> Lift Fit</a>
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link" href="/">Locations</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/">Classes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/">Training</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/">Gear</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-fill-item" href="/">Join Now</a>
-          </li>
-        </ul>
-        <!-- Nav End -->
-      </nav>
-
-      <!-- Header Section Begin -->
-      <header class="header"></header>
-      <!-- Header End -->
+      <!-- Side Menu Begin -->
+      <div class="menu">
+        <div class="link active"><i class="fas fa-chart-pie"></i>Dashboard</div>
+        <div class="link"><i class="fas fa-chart-line"></i>Reports</div>
+        <div class="link"><i class="fas fa-dollar-sign"></i>Orders</div>
+        <div class="link"><i class="fas fa-warehouse"></i>Inventory</div>
+        <div class="link"><i class="fas fa-cog"></i>Settings</div>
+      </div>
+      <!-- Side Menu End -->
+      <!-- Dashboard Begin -->
+      <div class="dashboard">
+        <!-- Header Begin -->
+        <div class="header">
+          <h1><i class="fas fa-angle-right"></i>Dashboard</h1>
+          <p>High level overview of your business</p>
+        </div>
+        <!-- Header End -->
+        <!-- Char Begin -->
+        <div class="chart">
+          <div class="title"><h3>Sales Figures</h3></div>
+        </div>
+        <!-- Char End -->
+        <!-- 3 Even Columns Begin -->
+        <div class="cards">
+          <div class="card">
+            <h3>Todays Message</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              doloremque excepturi ex perferendis ratione perspiciatis sint eius
+              illo, magnam maiores fugit inventore impedit consequatur error
+              dolor quasi voluptas? Rerum molestias fugiat modi quasi asperiores
+              architecto aperiam quas quam ullam laborum reiciendis veritatis
+              ducimus labore atque non, blanditiis sapiente minus quod?
+            </p>
+          </div>
+          <div class="card">
+            <h3>Order Alert</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              cum corporis unde, quidem iure deleniti vitae quasi accusamus
+              atque debitis.
+            </p>
+            <button>See Orders</button>
+          </div>
+          <div class="card">
+            <h3>Todays Figures</h3>
+          </div>
+        </div>
+        <!-- 3 Even Columns End -->
+      </div>
+      <!-- Dashboar End-->
     </div>
-    <!-- Container Wrapper End -->
+    <!-- Container End -->
   </body>
 </html>
