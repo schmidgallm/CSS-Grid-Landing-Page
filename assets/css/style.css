@@ -1,0 +1,280 @@
+/* Gloabl Styles */
+:root {
+  --bgPrimary: #304863;
+  --bgSeconday: #374f6c;
+  --bgTirtiary: #3f5b7c;
+  --accentPrimary: #d84674;
+  --accentSecondary: #6cd1dd;
+  --light: #fff;
+  --dark: #2e2e2e;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.btn {
+  background-color: var(--accentPrimary);
+  color: var(--light);
+  padding: 5px 10px;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--accentSecondary);
+  color: var(--light);
+}
+
+/* Container Parent */
+.container {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Nav Section */
+.nav {
+  margin: 0 40px;
+}
+
+.nav .nav-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+.nav .nav-list a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--bgPrimary);
+  padding: 1rem;
+  color: var(--accentPrimary);
+  text-transform: uppercase;
+  font-size: 14px;
+  box-shadow: 2px 2px 2px var(--dark);
+  font-weight: 600;
+}
+
+.nav .nav-list a:hover {
+  background-color: var(--accentPrimary);
+  color: var(--accentSecondary);
+}
+
+/* Hero Section */
+.top-container {
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    'cta cta locations locations'
+    'cta cta services contact';
+  margin: 0 100px;
+}
+
+.portfolio {
+  grid-area: cta;
+  min-height: 60vh;
+  background-image: url('/assets/img/portfolio.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 2px 2px 2px var(--dark);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 20px;
+}
+
+.portfolio h1 {
+  color: var(--light);
+  margin: 0;
+  font-size: 4rem;
+}
+
+.portfolio p {
+  color: var(--light);
+  margin: 10px 0;
+}
+
+.locations {
+  grid-area: locations;
+  background-image: url('/assets/img/locations.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 2px 2px 2px var(--dark);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20px;
+}
+
+.locations h3 {
+  color: var(--light);
+  margin: 0;
+  font-size: 2rem;
+}
+
+.locations p {
+  color: var(--light);
+  margin: 10px 0;
+}
+
+.card {
+  background-color: var(--bgSeconday);
+  color: var(--light);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  padding: 50px;
+  box-shadow: 2px 2px 2px var(--dark);
+}
+
+.card h3,
+.card p {
+  margin: 0;
+}
+
+.card i {
+  font-size: 25px;
+}
+
+.card .services {
+  grid-area: services;
+}
+
+.contact {
+  grid-area: contact;
+}
+
+/* Testomonial Section */
+.testomonials {
+  margin: 0 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.testomonial {
+  border: 1px solid var(--accentPrimary);
+  box-shadow: 2px 2px 2px var(--accentSecondary);
+}
+
+.testomonial i {
+  color: var(--accentPrimary);
+  font-size: 40px;
+  margin-right: 10px;
+}
+
+/* Gallery Image Section */
+.gallery {
+  text-align: center;
+  padding: 20px;
+  margin: 0 100px;
+}
+
+.gallery h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.gallery-imgs {
+  margin-top: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.gallery-imgs img {
+  width: 100%;
+  box-shadow: 2px 2px 2px var(--dark);
+}
+
+/* Footer Section */
+.footer {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: var(--bgPrimary);
+  padding: 20px;
+}
+
+.footer .footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer ul li {
+  margin: 5px 0;
+  color: var(--light);
+}
+
+#first-child {
+  color: var(--accentPrimary);
+}
+
+/* Media Queries */
+@media screen and (max-width: 1000px) {
+  .top-container {
+    grid-template-areas:
+      'cta cta'
+      'locations services'
+      'locations contact';
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .top-container {
+    margin: 0 auto;
+    grid-template-areas:
+      'cta'
+      'locations'
+      'services'
+      'contact';
+  }
+
+  .locations {
+    align-items: center;
+  }
+
+  .testomonials {
+    margin: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    margin: 0;
+  }
+
+  .gallery-imgs {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-container ul {
+   align-self: flex-start;
+}
