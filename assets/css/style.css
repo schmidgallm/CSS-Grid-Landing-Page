@@ -85,7 +85,7 @@ body {
 .portfolio {
   grid-area: cta;
   min-height: 60vh;
-  background-image: url('/assets/img/portfolio.jpg');
+  background-image: url('https://source.unsplash.com/random/600x600');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -110,7 +110,7 @@ body {
 
 .locations {
   grid-area: locations;
-  background-image: url('/assets/img/locations.jpg');
+  background-image: url('https://source.unsplash.com/random/600x200');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
